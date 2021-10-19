@@ -26,7 +26,8 @@ def jis_0208_to_kuten(jis_code):
 
 
 def jis_0208_to_char(unicode):
-    chr(int(jis_0208_to_uni(unicode), 16))
+    char = chr(int(jis_0208_to_uni(unicode), 16))
+    return char
 
 
 def kuten_to_jis_0208(ku, ten):

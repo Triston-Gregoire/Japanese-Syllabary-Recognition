@@ -14,9 +14,9 @@ def run_hira():
 
 
 def run_kata():
-    # read_katakana.read()
-    # split_kana.split(os.path.join(os.getcwd(), "katakana", "data", "katakana.npz"), data_definitions.katakana_definition, 64)
-    # katakana_network.train_katakana()
+    read_katakana.read()
+    split_kana.split(os.path.join(os.getcwd(), "katakana", "data", "katakana.npz"), data_definitions.katakana_definition, 64)
+    katakana_network.train_katakana()
     custom_test.test_model(os.path.join("katakana", "model", "katakana.h5"), "WrittenKatakana", (64, 64), 1)
 
 def run_kanji():
@@ -28,9 +28,7 @@ def run_kanji():
 
 # ToDo:
 #   add dedicated tests
-#   refactor EVERYTHING
 #   buy a better computer so I can actually train a model on 2965 kanji
-#   move kanji recognition to separate project
 if __name__ == '__main__':
     # Uncomment before run
     run_hira()
